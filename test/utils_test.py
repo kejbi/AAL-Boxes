@@ -1,5 +1,5 @@
 import unittest
-from solution.utils import volume, sort_boxes
+from solution.utils import volume, sort_boxes, rotate_box
 
 class TestUtils(unittest.TestCase):
 
@@ -17,6 +17,10 @@ class TestUtils(unittest.TestCase):
         boxes_list = [(1, 2, 3, 6), (2, 2, 3, 12), (1, 1, 1, 1)]
         sorted_boxes = [(2, 2, 3, 12), (1, 2, 3, 6), (1, 1, 1, 1)]
         self.assertListEqual(sort_boxes(boxes_list), sorted_boxes)
+    
+    def test_rotate_box(self):
+        box = [1, 3, 2, 6]
+        self.assertEqual(rotate_box(box), (3, 2, 1, 6))
 
 if __name__ == '__main__':
     unittest.main()
