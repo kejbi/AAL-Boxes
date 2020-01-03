@@ -1,9 +1,7 @@
 from .utils import sort_boxes
 
 def pack_boxes(boxes_list):
-    print(boxes_list)
     sorted_boxes = sort_boxes(boxes_list)
-    print(sorted_boxes)
     packed_boxes = []
     # for box in sorted_boxes:
     #     print(f'iteration {box}')

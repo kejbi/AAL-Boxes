@@ -24,3 +24,7 @@ traktujemy jako aktywny i usuwamy z listy kartonów.
 - wymiary kartonów są typu float
 - zbiór kartonów przechowywany jako lista
 - stos kartonów przechowywany jako lista
+
+## Plik z danymi wejściowymi
+- jedna linia = jeden karton
+- 3 współrzędne podane po przecinkach bez spacji, przykład: 3.5,2.0,4.2
