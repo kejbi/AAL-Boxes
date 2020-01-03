@@ -1,5 +1,6 @@
 from data.reader import read_boxes_from_file
 from solution.solver import pack_boxes
+from modes.modes import solve_from_input
 import argparse
 
 def main():
@@ -15,7 +16,9 @@ def main():
 
     args = parser.parse_args()
 
+    if args.m1 is not None:
+        solve_from_input(args.m1)
 
 if __name__ == '__main__':
-
+    main()
     
