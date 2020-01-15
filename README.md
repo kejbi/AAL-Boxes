@@ -3,7 +3,7 @@ University Project - AAL Boxes
 
 ## Problem
 Ortodoksyjny kolekcjoner kartonów zaczyna narzekać na brak miejca. Postanowił oszczędzić miejsce przez wkładanie kartonów jeden w drugi.
-W trosce o zachowaniedobrego stanu kartonów wkłada tylko jeden karton wewątrz większego, a wolną przestrzeń wypełnia materiałem ochronnym.
+W trosce o zachowanie dobrego stanu kartonów wkłada tylko jeden karton wewnątrz większego, a wolną przestrzeń wypełnia materiałem ochronnym.
 Tak zabezpieczony karton umieszcza wewnątrz innego większego kartonu. Nie może schować 2 kartonów obok siebie w innym kartonie.
 Dla danego zbioru kartonów znaleźć najlepsze upakowanie, czyli zwalniające najwięcej miejsca.
 
@@ -57,8 +57,8 @@ python run.py -m3 -n 1000 -k 19 -step 1000 -r 5
 
 ## WE/WY
 1. tryb m1 - wejście nazwa pliku wejściowego (txt), wyjście - plik tekstowy o nazwie pliku wejściowego z przedrostkiem output_ z 
-intuicyjną reprezentacją upakowania kartonów i całkowitą objętością
-2. tryb m2 - wejście nazwa pliku wyjściowego, wielkość generowanego problemu, max zakres długości krawędzi; wyjście - plik tekstowy o nazwie wprowadzonej na wejściu z upakowanymi kartonami
+intuicyjną reprezentacją upakowania kartonów (każda lista oznacza kolejno upakowane w siebie kartony, każdy stos kartonów jest oddzielany kreską) i całkowitą objętością
+2. tryb m2 - wejście nazwa pliku wyjściowego, wielkość generowanego problemu, max zakres długości krawędzi; wyjście - plik tekstowy o nazwie wprowadzonej na wejściu z upakowanymi kartonami (jak w m1)
 3. tryb m3 - wejście wielkość początkowej instancji problemu, ilość kroków, rozmiar kroku, liczba testów dla każdej wielkości; wyjście - plik time_test_results.txt z wynikami pomiarów czasowych
 
 ### Uruchomienie testów
