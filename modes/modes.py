@@ -35,7 +35,17 @@ def time_test(start_count, step, k, r):
             pack_boxes(boxes)
             end = time()
             step_times.append(end-start)
-        times.append(mean(step_times))
+        avg_time = mean(step_times)
+        times.append(avg_time)
         number_of_boxes += step
-    return times, median(times)
+    return times, median(times), median(range(start_count, number_of_boxes, step))
+
+def generate_results(times, median_time, n, n_median, step):
+    with open('time_test_results.txt', 'w') as writer:
+        writer.write(f't(median) = {median_time}\nn --- t(n) --- q(n)\n=======================\n')
+        for t in times:
+            q = (t * (n_median ** 2)) / ((n ** 2) * median_time)
+            writer.write(f'{n} --- {t} --- {q}\n')
+            n += step
+
 

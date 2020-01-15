@@ -1,6 +1,6 @@
 from data.reader import read_boxes_from_file
 from solution.solver import pack_boxes
-from modes.modes import solve_from_input, generate_and_solve
+from modes.modes import solve_from_input, generate_and_solve, time_test, generate_results
 import argparse
 
 def main():
@@ -23,6 +23,13 @@ def main():
             print('-n or -mr flag is missing')
         else:
             generate_and_solve(args.m2, args.n, args.mr)
+    elif args.m3:
+        if args.n is None or args.k is None or args.step is None or args.r is None:
+            print('-n -k -step -r flags required')
+        else:
+            times, median_time, n_median = time_test(args.n, args.step, args.k, args.r)
+            print(n_median)
+            generate_results(times, median_time, args.n, n_median, args.step)
 
 if __name__ == '__main__':
     main()

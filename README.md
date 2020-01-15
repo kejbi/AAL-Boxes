@@ -28,3 +28,35 @@ traktujemy jako aktywny i usuwamy z listy kartonów.
 ## Plik z danymi wejściowymi
 - jedna linia = jeden karton
 - 3 współrzędne podane po przecinkach bez spacji, przykład: 3.5,2.0,4.2
+
+## Moduły programu
+1. data - wczytywanie danych z plików oraz generacja danych
+2. solution - algorytm i pomocnicze funkcje
+3. modes - tryby dzialania programu
+4. test - testy jednostkowe (biblioteka unitttest)
+
+## Uruchomienie programu
+python run.py [-h] [-m1 M1] [-m2 M2] [-m3] [-n N] [-mr MR] [-k K] [-step STEP]
+              [-r R]
+
+
+- -h, --help  show this help message and exit
+-   -m1 M1      Give an input file name
+-   -m2 M2      Give an output file name. Generates instation of problem and
+-               solves it (-n and -mr flags required)
+-   -m3         Time measure for different problem instances (-n -k -step -r
+-               flags required)
+-   -n N        Size of problem instance
+-   -mr MR      Max length of edge of the box
+-   -k K        Number of measured sizes of problem instances
+-   -step STEP  Increment step
+-   -r R        Number of tests for each size
+
+#### Przykładowe użycie:
+python run.py -m3 -n 1000 -k 19 -step 1000 -r 5
+
+### Uruchomienie testów
+python -m test.nazwa_pliku_testowego_bez_rozszerzenia
+
+#### Przykład
+python -m test.solver_test
