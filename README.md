@@ -1,4 +1,4 @@
-# AAL-Boxes, Kacper Biegajski
+# AAL-Boxes, Kacper Biegajski ISI
 University Project - AAL Boxes
 
 ## Problem
@@ -54,6 +54,12 @@ python run.py [-h] [-m1 M1] [-m2 M2] [-m3] [-n N] [-mr MR] [-k K] [-step STEP]
 
 #### Przykładowe użycie:
 python run.py -m3 -n 1000 -k 19 -step 1000 -r 5
+
+## WE/WY
+1. tryb m1 - wejście nazwa pliku wejściowego (txt), wyjście - plik tekstowy o nazwie pliku wejściowego z przedrostkiem output_ z 
+intuicyjną reprezentacją upakowania kartonów i całkowitą objętością
+2. tryb m2 - wejście nazwa pliku wyjściowego, wielkość generowanego problemu, max zakres długości krawędzi; wyjście - plik tekstowy o nazwie wprowadzonej na wejściu z upakowanymi kartonami
+3. tryb m3 - wejście wielkość początkowej instancji problemu, ilość kroków, rozmiar kroku, liczba testów dla każdej wielkości; wyjście - plik time_test_results.txt z wynikami pomiarów czasowych
 
 ### Uruchomienie testów
 python -m test.nazwa_pliku_testowego_bez_rozszerzenia
