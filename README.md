@@ -43,9 +43,9 @@ python run.py [-h] [-m1 M1] [-m2 M2] [-m3] [-n N] [-mr MR] [-k K] [-step STEP]
 - -h, --help  show this help message and exit
 -   -m1 M1      Give an input file name
 -   -m2 M2      Give an output file name. Generates instation of problem and
--               solves it (-n and -mr flags required)
+              solves it (-n and -mr flags required)
 -   -m3         Time measure for different problem instances (-n -k -step -r
--               flags required)
+               flags required)
 -   -n N        Size of problem instance
 -   -mr MR      Max length of edge of the box
 -   -k K        Number of measured sizes of problem instances
