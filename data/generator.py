@@ -4,9 +4,9 @@ import random
 def generate_boxes(count, max_range):
     boxes = []
     for i in range(0, count):
-        x = random.randint(1, max_range)
-        y = random.randint(1, max_range)
-        z = random.randint(1, max_range)
+        x = random.randint(1, max_range) + random.random()
+        y = random.randint(1, max_range) + random.random()
+        z = random.randint(1, max_range) + random.random()
         box = [x, y, z, volume(x, y, z)]
         boxes.append(rotate_box(box))
     return boxes

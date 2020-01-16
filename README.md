@@ -59,7 +59,11 @@ python run.py -m3 -n 1000 -k 19 -step 1000 -r 5
 1. tryb m1 - wejście nazwa pliku wejściowego (txt), wyjście - plik tekstowy o nazwie pliku wejściowego z przedrostkiem output_ z 
 intuicyjną reprezentacją upakowania kartonów (każda lista oznacza kolejno upakowane w siebie kartony od największego do najmniejszego, każdy stos kartonów jest oddzielany kreską) i całkowitą objętością
 2. tryb m2 - wejście nazwa pliku wyjściowego, wielkość generowanego problemu, max zakres długości krawędzi; wyjście - plik tekstowy o nazwie wprowadzonej na wejściu z upakowanymi kartonami (jak w m1)
-3. tryb m3 - wejście wielkość początkowej instancji problemu, ilość kroków, rozmiar kroku, liczba testów dla każdej wielkości; wyjście - plik time_test_results.txt z wynikami pomiarów czasowych
+3. tryb m3 - wejście nazwa pilku wyjściowego, wielkość początkowej instancji problemu, ilość kroków, rozmiar kroku, liczba testów dla każdej wielkości; wyjście - plik time_test_results.txt z wynikami pomiarów czasowych
+
+## Generowanie instancji problemu
+1. Normalne - wartość każdej krawędzi (x, y, z) jest losowana z przedziału od 1 do mr (podanego przez użytkownika) i dodawana jest do niej losowa liczba typu float z przedziału (0,1)
+2. Trudne - wartości krawędzi x i y są losowane z przedziału od 1 do 10, krawędź z jest równa z prawdopodobieństwem 92% 0.643, w przeciwnym razie jest równa 0.487. Ma to za zadanie lekko urozmaicić dane, by za każdym razem z nie był ten sam. Częste powtarzanie się jednej z krawędzi zapewnia, że kartony nie będą się w sobie mieścić, co sprawi dla każdego kartonu wiele operacji porównania z innymi. 
 
 ### Uruchomienie testów
 python -m test.nazwa_pliku_testowego_bez_rozszerzenia
