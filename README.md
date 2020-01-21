@@ -40,17 +40,16 @@ python run.py [-h] [-m1 M1] [-m2 M2] [-m3] [-n N] [-mr MR] [-k K] [-step STEP]
               [-r R]
 
 
-- -h, --help  show this help message and exit
--   -m1 M1      Give an input file name
--   -m2 M2      Give an output file name. Generates instation of problem and
-              solves it (-n and -mr flags required)
--   -m3         Time measure for different problem instances (-n -k -step -r
-               flags required)
--   -n N        Size of problem instance
--   -mr MR      Max length of edge of the box
--   -k K        Number of measured sizes of problem instances
--   -step STEP  Increment step
--   -r R        Number of tests for each size
+- -h, --help    pomoc
+-   -m1 M1      podaj nazwę pliku wejściowego, rozwiązuje instancję problemu i zwraca plik wyjściowy
+-   -m2 M2      podaj nazwę pliku wejściowego, generuje i rozwiązuje instancję problemu oraz zwraca plik wyjściowy (flagi -n i -mr wymagane)
+-   -m3         podaj nazwe pliku wyjsciowego, pomiar czasow dla różnych wielkości instancji problemów (-n -k -step -r
+               wymagane)
+-   -n N        rozmiar instancji problemu
+-   -mr MR      max długośc krawędzi kartonu
+-   -k K        ilość badanych wielkości instancji (m3)
+-   -step STEP  krok (m3)
+-   -r R        liczba testów dla każdej wielkości instancji (m3)
 
 #### Przykładowe użycie:
 python run.py -m3 -n 1000 -k 19 -step 1000 -r 5
