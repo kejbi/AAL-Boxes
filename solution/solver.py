@@ -52,7 +52,8 @@ def dynamic_pack_boxes(boxes):
     sorted_boxes = sort_boxes(boxes, False)
     table = [[sorted_boxes[0]]]
     for box in sorted_boxes[1:]:
-        sorted_stacks = sorted(table, key = lambda x : x[-1][3])
+        #sorting stacks by volume of each stack (biggest box volume)
+        sorted_stacks = sorted(table, key = lambda x : x[-1][3]) #[-1][3] means volume of stack (volume of biggest box in stack)
         added = False
         for stack in sorted_stacks:
             if box[0] > stack[-1][0] and box[1] > stack[-1][1] and box[2] > stack[-1][2]:
