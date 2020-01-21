@@ -1,8 +1,8 @@
 def volume(x, y, z):
     return x*y*z
 
-def sort_boxes(boxes_list):
-    boxes_list.sort(key = lambda x : x[3], reverse = True)
+def sort_boxes(boxes_list, reverse):
+    boxes_list.sort(key = lambda x : x[3], reverse = reverse)
     return boxes_list
 
 def rotate_box(box):

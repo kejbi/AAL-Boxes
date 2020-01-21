@@ -1,6 +1,6 @@
 from data.reader import read_boxes_from_file
 from solution.solver import pack_boxes
-from modes.modes import solve_from_input, generate_and_solve, time_test, generate_results
+from modes.modes import solve_from_input, generate_and_solve, time_test, generate_results, compare
 import argparse
 
 def main():
@@ -8,6 +8,7 @@ def main():
     parser.add_argument('-m1', type=str, help='Give an input file name. Solves an input instation of problem')
     parser.add_argument('-m2', type=str, help='Give an output file name. Generates instation of problem and solves it (-n and -mr flags required)')
     parser.add_argument('-m3', type=str, help='Give an output name. Time measure for different problem instances (-n -k -step -r flags required)')
+    parser.add_argument('-m4', action='store_true', help='Give an output name. Time measure for different problem instances (-n -k -step -r flags required)')
     parser.add_argument('-n', type=int, help='Size of problem instance')
     parser.add_argument('-mr', type=int, help='Max length of edge of the box')
     parser.add_argument('-k', type=int, help='Number of measured sizes of problem instances')
@@ -30,6 +31,8 @@ def main():
             times, median_time, n_median = time_test(args.n, args.step, args.k, args.r)
             print(n_median)
             generate_results(args.m3, times, median_time, args.n, n_median, args.step)
+    elif args.m4:
+        compare()
 
 if __name__ == '__main__':
     main()
