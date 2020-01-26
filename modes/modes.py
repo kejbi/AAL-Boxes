@@ -1,6 +1,6 @@
 from data.reader import read_boxes_from_file
 from data.generator import generate_boxes, generate_boxes_hard
-from solution.solver import pack_boxes, pack_boxes_reverse, dynamic_pack_boxes
+from solution.solver import pack_boxes, pack_boxes_reverse, flow_pack_boxes
 from time import time
 from statistics import mean, median
 from copy import deepcopy
@@ -52,21 +52,21 @@ def generate_results(times, median_time, n, n_median, step):
 def compare():
     counter1 = 0
     counter2 = 0
-    for i in range(0,1000):
-        boxes = generate_boxes(20, 10)
+    for i in range(0,10000):
+        boxes = generate_boxes(7, 10)
         boxes2 = deepcopy(boxes)
         boxes3 = deepcopy(boxes)
         packed1, vol1 = pack_boxes(boxes)
-        packed2, vol2 =  pack_boxes_reverse(boxes2)
-        packed3, vol3 = dynamic_pack_boxes(boxes3)
+        packed2, vol2 =  flow_pack_boxes(boxes2)
+        packed3, vol3 = pack_boxes_reverse(boxes3)
         if vol2 <= vol1:
             print(vol1, vol2)
             counter1 += 1
 
         if vol3 <= vol1:
-            print(vol1, vol3)
-            counter2 += 1
+           print(vol1, vol3)
+           counter2 += 1
 
-    print(f'dynamic byl lepszy lub równy {counter2} razy z 1000')
-    print(f'reverse byl lepszy lub równy {counter1} razy z 1000')
+    print(f'flow byl lepszy lub równy {counter1} razy z 1000')
+    print(f'reverse byl lepszy lub równy {counter2} razy z 1000')
 

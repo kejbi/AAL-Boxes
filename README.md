@@ -45,6 +45,7 @@ python run.py [-h] [-m1 M1] [-m2 M2] [-m3] [-n N] [-mr MR] [-k K] [-step STEP]
 -   -m2 M2      podaj nazwę pliku wejściowego, generuje i rozwiązuje instancję problemu oraz zwraca plik wyjściowy (flagi -n i -mr wymagane)
 -   -m3         podaj nazwe pliku wyjsciowego, pomiar czasow dla różnych wielkości instancji problemów (-n -k -step -r
                wymagane)
+-   -m4         tryb porownania 3 algorytmow
 -   -n N        rozmiar instancji problemu
 -   -mr MR      max długośc krawędzi kartonu
 -   -k K        ilość badanych wielkości instancji (m3)

@@ -8,7 +8,7 @@ def main():
     parser.add_argument('-m1', type=str, help='Give an input file name. Solves an input instation of problem')
     parser.add_argument('-m2', type=str, help='Give an output file name. Generates instation of problem and solves it (-n and -mr flags required)')
     parser.add_argument('-m3', type=str, help='Give an output name. Time measure for different problem instances (-n -k -step -r flags required)')
-    parser.add_argument('-m4', action='store_true', help='Give an output name. Time measure for different problem instances (-n -k -step -r flags required)')
+    parser.add_argument('-m4', action='store_true', help='compare mode')
     parser.add_argument('-n', type=int, help='Size of problem instance')
     parser.add_argument('-mr', type=int, help='Max length of edge of the box')
     parser.add_argument('-k', type=int, help='Number of measured sizes of problem instances')
